@@ -1,11 +1,14 @@
 package com.pole.kiosk;
 
+import com.pole.kiosk.helper.DatabaseHelper;
+
 import javax.swing.*;
 import static com.pole.kiosk.ExtensionsKt.showErrorDialog;
 
 public class MainApplication {
     public static void main(String[] args) {
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
+        DatabaseHelper.Companion.connect();
         try {
             for (UIManager.LookAndFeelInfo info :
                     UIManager.getInstalledLookAndFeels()) {
