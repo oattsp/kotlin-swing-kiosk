@@ -10,10 +10,6 @@ import com.pole.kiosk.page.PageMain
 import java.awt.event.ActionEvent
 import java.awt.event.ActionListener
 import javax.swing.*
-import java.awt.Color
-
-
-
 
 class MainFrame : JFrame(), ActionListener {
     private var serial: SerialPort? = getSerialPort()

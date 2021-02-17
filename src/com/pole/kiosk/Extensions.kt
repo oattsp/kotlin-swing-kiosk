@@ -9,11 +9,12 @@ fun showConfirmDialog() {
     val result = JOptionPane.showConfirmDialog(
         null,
         "You want to close the program?", "Close Program",
-        JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE
+        JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE
     )
 
-    if (result == JOptionPane.YES_OPTION) {
-        exitProcess(0)
+    when (result) {
+        JOptionPane.YES_OPTION -> exitProcess(0)
+        JOptionPane.NO_OPTION -> SettingFrame().isVisible = true
     }
 }
 

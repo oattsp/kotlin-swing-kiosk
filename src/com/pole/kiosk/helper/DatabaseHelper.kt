@@ -80,5 +80,13 @@ class DatabaseHelper {
                 return sections
             }
         }
+
+        fun updateByPageButton(page: Int, button: Int, section: Int) {
+            val sql = "UPDATE sections SET section=$section WHERE page=$page AND button=$button"
+
+            statement.let {
+                it.executeUpdate(sql)
+            }
+        }
     }
 }
